@@ -72,22 +72,22 @@ public class MyntraTest {
 		  {
 			  if(!values.equalsIgnoreCase(window1Details))
 			  {
-				  driver.switchTo().window(values);
+				   driver.switchTo().window(values);
 				  
-				  driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/div[6]/div[2]/div/div/div[2]/div/span")).click();
-				  driver.findElement(By.xpath("//*[@id=\"edd\"]/div[1]/div/span[2]")).click();
+				   driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/div[6]/div[2]/div/div/div[2]/div/span")).click();
+				   driver.findElement(By.xpath("//*[@id=\"edd\"]/div[1]/div/span[2]")).click();
 				  
-				  //Enter pincode to check delivery
+				   //Enter pincode to check delivery
 				  
-				  driver.findElement(By.xpath("//*[@id=\"edd-pincode\"]/div/div/div[2]/form/div/input")).sendKeys("680724");
-				  driver.findElement(By.xpath("//*[@id=\"edd-pincode\"]/div/div/div[2]/form/div/button")).click();
+				   driver.findElement(By.xpath("//*[@id=\"edd-pincode\"]/div/div/div[2]/form/div/input")).sendKeys("680724");
+				   driver.findElement(By.xpath("//*[@id=\"edd-pincode\"]/div/div/div[2]/form/div/button")).click();
 				  
 				  //print product's country of origin, customer care address
 				  
 				    JavascriptExecutor js = (JavascriptExecutor) driver;
-					js.executeScript("window.scrollBy(0,650)", "");
-		            Thread.sleep(2000);
-					driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/section/h2[2]/ul/li[13]/div")).click();
+				    js.executeScript("window.scrollBy(0,650)", "");
+		                    Thread.sleep(2000);
+				    driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/section/h2[2]/ul/li[13]/div")).click();
 				    String origin= driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/section/h2[2]/ul/li[17]/div/div[1] ")).getText();
 				    String country= driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/section/h2[2]/ul/li[17]/div/div[3]")).getText();
 				    String address1= driver.findElement(By.xpath("//*[@id=\"appContainer\"]/div[2]/div/div/div[2]/div/div[3]/div/section/h2[2]/ul/li[18]/div/div[1]")).getText();
